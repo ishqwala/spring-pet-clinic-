@@ -2,11 +2,11 @@
 pipeline {
     
     environment {
-    imagename = "mnagen/mypetclinic"
-    registryCredential = 'mydockercredentials'
+    imagename = "ishqwala/my1stpetclinic"
+    registryCredential = 'ubu'
     dockerImage = ''
   }
-    agent any
+    agent {label 'worker5'}
 
     stages {
         
