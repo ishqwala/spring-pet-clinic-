@@ -2,11 +2,11 @@
 pipeline {
     
     environment {
-    imagename = "ishqwala/my1stpetclinic"
-    registryCredential = 'ubu'
+    imagename = "ishqwala/jaffarclinic"
+    registryCredential = 'jaffar-id'
     dockerImage = ''
   }
-    agent {label 'worker5'}
+    agent any
 
     stages {
         
@@ -15,7 +15,7 @@ pipeline {
         stage('git') {
             steps {
                 echo 'clonning Repository'
-                git branch: 'main', url: 'https://github.com/mnagen/spring-petclinic.git'
+                git branch: 'main', url: 'https://github.com/ishqwala/spring-pet-clinic-.git'
                 
                 echo 'Repo clone successfully'
             }
